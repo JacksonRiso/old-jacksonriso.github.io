@@ -1,0 +1,42 @@
+# Site settings
+title: Jackson Riso Consulting
+email: contact@jacksonriso.com
+description: >-
+  I help fast-growing orgs & startups design, build, and maintain better
+  automated systems as a business process consultant.
+baseurl: ""
+url: "https://jacksonriso.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+
+# Collections
+collections:
+  case_studies:
+    output: true
+    permalink: /:collection/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "case_studies"
+    values:
+      layout: "case-study"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - README.md
